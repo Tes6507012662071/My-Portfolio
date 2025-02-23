@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vorameth Patummasut</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script defer src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script defer src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        /* เพิ่มสไตล์สำหรับการจัดระเบียบเนื้อหา */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .section-title {
+            margin-bottom: 30px;
+        }
+        .lead {
+            font-size: 1.2rem;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+        }
+        .container {
+            max-width: 1100px;
+        }
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .hover-effect:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s ease;
+        }
+        /* Animation Effect for Title */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Apply animation to the h2 tag */
+        .animated-title {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .navbar {
+            transition: background-color 0.3s;
+        }
+
+        .navbar.scrolled {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Vorameth Patummasut</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="py-5 text-center bg-light">
+        <div class="container">
+            <img src="/assets/img/profile.jpg" alt="About Me" class="img-fluid rounded-circle mb-4" style="width: 400px; height: 400px; object-fit: cover; border: 5px solid #f8f9fa;">
+            
+            <h2 class="section-title text-dark animated-title" style="font-size: 2rem; font-weight: bold; color: #2c3e50; text-transform: uppercase; letter-spacing: 2px;">About Me</h2>
+            
+            <p class="lead" style="font-size: 1.25rem; color: #555;">
+                Hi, I’m Vorameth Patummasut (Tes), an IT student with a passion for both frontend and backend development. I’m currently studying Informatics for the Digital Economy at King Mongkut's University of Technology North Bangkok, and I’ve gained experience in HTML, CSS, JavaScript, Python, Node.js, and more.
+            </p>
+    
+            <p class="lead" style="font-size: 1.25rem; color: #555;">
+                With a GPAX of 3.31, I’m looking to apply for a Developer position to further develop my skills. Coding to me is about simplifying complex problems and creating enjoyable, functional products.
+            </p>
+    
+            <div id="moreContent" style="display: none;">
+                <p class="lead" style="font-size: 1.25rem; color: #555;">
+                    When I’m not coding, I love listening to music, watching movies, and working on mini-projects. Let’s connect and create something great!
+                </p>
+                <a href="/assets/img/Vorameth Patummasut_Resume.pdf" class="btn btn-success">Download Resume</a>
+            </div>
+            <button id="readMoreBtn" class="btn btn-primary mt-3" onclick="toggleContent()" aria-label="Toggle content visibility">Read More</button>
+        </div>
+    </section>
+    
+    <script>
+        function toggleContent() {
+            var moreContent = document.getElementById("moreContent");
+            var btn = document.getElementById("readMoreBtn");
+            
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "block";
+                btn.textContent = "Read Less";
+            } else {
+                moreContent.style.display = "none";
+                btn.textContent = "Read More";
+            }
+        }
+    </script>
+      
+    <section id="projects" class="py-5 text-center text-white">
+        <div class="container">
+            <h2 class="section-title text-dark mb-4" style="font-size: 2rem; font-weight: bold; color: #333; text-transform: uppercase; letter-spacing: 2px; padding-bottom: 20px;">Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-4 shadow-lg hover-effect">
+                        <h3>Medimove (IoT Project)</h3>
+                        <p>Involved in a research project on electric delivery vehicles for use in hospitals, funded by the university under the collaboration project funding scheme for the academic year 2023. As part of this project, I utilized Flutter to design the mobile application for vehicle management and coordination. The project also made use of IoT technology from Advantech, integrating Python to handle data processing and communication between devices. Additionally, the project led to winning the Advantech AIoT Innoworks Thailand 2024 competition.</p>
+                        <img src="/assets/img/advantechreward.jpg" alt="Medimove Project" class="img-fluid project-image">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4 shadow-lg hover-effect">
+                        <h3>SCG Home Research</h3>
+                        <p>Utilized Morpcast, an advanced AI tool for emotion analysis, to monitor and assess users' emotional responses during their interactions with the SCG Home app. By analyzing facial expressions and voice tones, we were able to gather valuable insights to inform UX/UI improvements. These data-driven enhancements, made in collaboration with the design and development teams, helped to optimize the app's user experience, increase engagement, and ensure a more personalized and responsive interface.</p>
+                        <img src="/assets/img/Morpcast.png" alt="SCG Home Research" class="img-fluid project-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="skills" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; font-weight: bold; color: #333; text-transform: uppercase; letter-spacing: 2px; padding-bottom: 20px;">Skills</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <i class="fab fa-html5 fa-5x text-danger mb-3"></i>
+                    <h4>HTML</h4>
+                    <p>Expert in building the structure of web pages using HTML5, ensuring semantic code and accessibility.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fab fa-css3-alt fa-5x text-primary mb-3"></i>
+                    <h4>CSS</h4>
+                    <p>Skilled in styling web pages with CSS3, creating responsive layouts and beautiful user interfaces.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fab fa-js-square fa-5x text-warning mb-3"></i>
+                    <h4>JavaScript</h4>
+                    <p>Experienced in front-end development using JavaScript for dynamic websites and interactive features.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-laptop-code fa-5x text-info mb-3"></i>
+                    <h4>Flutter</h4>
+                    <p>Developed cross-platform mobile applications using Flutter for Android and iOS.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fab fa-python fa-5x text-success mb-3"></i>
+                    <h4>Python</h4>
+                    <p>Skilled in backend development and data analysis with Python.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fab fa-bootstrap fa-5x text-dark mb-3"></i>
+                    <h4>Bootstrap</h4>
+                    <p>Proficient in using Bootstrap to create responsive, mobile-first websites with pre-built components.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-chart-line fa-5x text-primary mb-3"></i>
+                    <h4>Data Analysis</h4>
+                    <p>Experienced in data analysis and visualizing insights using Python and other tools.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-database fa-5x text-dark mb-3"></i>
+                    <h4>SQL</h4>
+                    <p>Skilled in writing SQL queries and managing relational databases like MySQL and PostgreSQL.</p>
+                </div>
+            </div>
+        </div>
+    </section>          
+    
+    <section id="certificates" class="py-5 text-center">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; font-weight: bold; color: #333; text-transform: uppercase; letter-spacing: 2px; padding-bottom: 20px;">Certificates & Awards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/assets/img/AdvantechChamp.webp" alt="Certificates" class="img-fluid mt-4" style="max-width: 100%;">
+                    <li class="list-group-item">Advantech AIoT InnoWorks 2024 - 1st Place</li>
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/img/Data_analyst.png" alt="Certificates" class="img-fluid mt-4" style="max-width: 100%;">
+                    <li class="list-group-item">Google Data Analytics Professional Certificate</li>
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/img/AdvantechUni.webp" alt="Certificates" class="img-fluid mt-4" style="max-width: 100%;">
+                    <li class="list-group-item">KMUTNB Interfaculty collaboration Senior Project Award 2023</li>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <img src="/assets/img/advocate.png" alt="Certificates" class="img-fluid mt-4" style="max-width: 100%;">
+                    <li class="list-group-item">Participated in the 1st edition of the Advocate Webinar</li>
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/img/StudentUniCer.webp" alt="Certificates" class="img-fluid mt-4" style="max-width: 100%;">
+                    <li class="list-group-item">A student who engages in good deeds and brings honor to the university in the academic year 2023</li>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5 text-center bg-dark text-white">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; padding-bottom: 5px;">Contact Me</h2>
+            <p>
+                <i class="fas fa-envelope me-2"></i>
+                Email: <a href="mailto:woramet.t2@gmail.com" class="text-white">woramet.t2@gmail.com</a>
+            </p>
+            <p>
+                <i class="fab fa-github me-2"></i>
+                GitHub: <a href="https://github.com/Tes6507012662071" class="text-white" target="_blank">My GitHub</a>
+            </p>
+            <p>
+                <i class="fab fa-linkedin me-2"></i>
+                LinkedIn: <a href="https://www.linkedin.com/in/txss-ps-a9954733a/" class="text-white" target="_blank">My LinkedIn</a>
+            </p>
+            <p>
+                <i class="fas fa-phone-alt me-2"></i>
+                Phone: <a href="tel:+66655465364" class="text-white">+66 65 536 5364</a>
+            </p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+<meta name="description" content="Portfolio of Vorameth Patummasut, an IT student with skills in frontend and backend development.">
+<meta name="keywords" content="IT student, Frontend, Backend, Portfolio, Developer, Projects">
+<meta name="author" content="Vorameth Patummasut">

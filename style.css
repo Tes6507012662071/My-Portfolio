@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: #2a2a3b;
+    padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
